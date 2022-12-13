@@ -11,12 +11,12 @@ void Eft(String Str){
      * 
     */
   String RF_data = RC_reading(Str);
-  String a0 = fenge(RF_data,"|",0);//433/315判断
-  String a1 = fenge(RF_data,"|",1);//2进制
-  String a5 = fenge(RF_data,"|",2);//震荡值
-  String a6 = fenge(RF_data,"|",3);//协议
-  int a2 = atoi(a5.c_str());//震荡值
-  int a3 = atoi(a6.c_str());//协议
+  String a0 = fenge(RF_data,"|",0); //433/315判断
+  String a1 = fenge(RF_data,"|",1); //2进制
+  String a5 = fenge(RF_data,"|",2); //震荡值
+  String a6 = fenge(RF_data,"|",3); //协议
+  int a2 = atoi(a5.c_str()); //震荡值
+  int a3 = atoi(a6.c_str()); //协议
 
   if(a0 == "433"){
     Switch_433.setProtocol(a3);
